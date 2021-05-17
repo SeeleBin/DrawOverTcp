@@ -1,0 +1,17 @@
+﻿<Window x:Class="DrawTcp.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DrawTcp"
+        
+        mc:Ignorable="d"
+        Title="Login" Height="118.5" Width="353">
+    <Grid Margin="0,0,2,-21">
+        <Label Content="Insert port" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="78" Margin="2,26,0,0"/>
+        <TextBox x:Name="PortTxt" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="108,30,0,0" Text="55000"/>
+        <Button x:Name="InfoGather" Content="Enter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="258,10,0,0" Height="58" Click="InfoGather_Click"/>
+        <Label x:Name="waitInfo" Content="Waiting for connection..." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,57,0,0" Visibility="Hidden"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,17 @@
+C:\Users\hamza\source\repos\DrawTcp\PaintTcp\bin\Debug\PaintTcp.exe.config
+C:\Users\hamza\source\repos\DrawTcp\PaintTcp\bin\Debug\PaintTcp.exe
+C:\Users\hamza\source\repos\DrawTcp\PaintTcp\bin\Debug\PaintTcp.pdb
+C:\Users\hamza\source\repos\DrawTcp\PaintTcp\obj\Debug\PaintTcp.csprojAssemblyReference.cache
+C:\Users\hamza\source\repos\DrawTcp\PaintTcp\obj\Debug\MainWindow.g.cs
+C:\Users\hamza\source\repos\DrawTcp\PaintTcp\obj\Debug\App.g.cs
+C:\Users\hamza\source\repos\DrawTcp\PaintTcp\obj\Debug\PaintTcp_MarkupCompile.cache
+C:\Users\hamza\source\repos\DrawTcp\PaintTcp\obj\Debug\PaintTcp_MarkupCompile.lref
+C:\Users\hamza\source\repos\DrawTcp\PaintTcp\obj\Debug\MainWindow.baml
+C:\Users\hamza\source\repos\DrawTcp\PaintTcp\obj\Debug\PaintTcp.g.resources
+C:\Users\hamza\source\repos\DrawTcp\PaintTcp\obj\Debug\PaintTcp.Properties.Resources.resources
+C:\Users\hamza\source\repos\DrawTcp\PaintTcp\obj\Debug\PaintTcp.csproj.GenerateResource.cache
+C:\Users\hamza\source\repos\DrawTcp\PaintTcp\obj\Debug\PaintTcp.csproj.CoreCompileInputs.cache
+C:\Users\hamza\source\repos\DrawTcp\PaintTcp\obj\Debug\PaintTcp.exe
+C:\Users\hamza\source\repos\DrawTcp\PaintTcp\obj\Debug\PaintTcp.pdb
+C:\Users\hamza\source\repos\DrawTcp\PaintTcp\obj\Debug\Login.g.cs
+C:\Users\hamza\source\repos\DrawTcp\PaintTcp\obj\Debug\Login.baml

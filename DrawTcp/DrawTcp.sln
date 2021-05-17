@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawTcp", "DrawTcp\DrawTcp.csproj", "{31EF1D3F-346E-49C5-B248-A0AD65BB76B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaintTcp", "PaintTcp\PaintTcp.csproj", "{F803CCF2-43BD-4740-B859-345A4EBE6E5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31EF1D3F-346E-49C5-B248-A0AD65BB76B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31EF1D3F-346E-49C5-B248-A0AD65BB76B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31EF1D3F-346E-49C5-B248-A0AD65BB76B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31EF1D3F-346E-49C5-B248-A0AD65BB76B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F803CCF2-43BD-4740-B859-345A4EBE6E5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F803CCF2-43BD-4740-B859-345A4EBE6E5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F803CCF2-43BD-4740-B859-345A4EBE6E5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F803CCF2-43BD-4740-B859-345A4EBE6E5F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C71AE233-5FF1-43E8-B345-83740319D5F1}
+	EndGlobalSection
+EndGlobal

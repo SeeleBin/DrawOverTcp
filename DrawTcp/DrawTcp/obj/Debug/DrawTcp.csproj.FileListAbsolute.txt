@@ -1,0 +1,17 @@
+C:\Users\hamza\source\repos\DrawTcp\DrawTcp\obj\Debug\DrawTcp.csprojAssemblyReference.cache
+C:\Users\hamza\source\repos\DrawTcp\DrawTcp\obj\Debug\MainWindow.g.cs
+C:\Users\hamza\source\repos\DrawTcp\DrawTcp\obj\Debug\App.g.cs
+C:\Users\hamza\source\repos\DrawTcp\DrawTcp\obj\Debug\DrawTcp_MarkupCompile.cache
+C:\Users\hamza\source\repos\DrawTcp\DrawTcp\obj\Debug\DrawTcp_MarkupCompile.lref
+C:\Users\hamza\source\repos\DrawTcp\DrawTcp\bin\Debug\DrawTcp.exe.config
+C:\Users\hamza\source\repos\DrawTcp\DrawTcp\bin\Debug\DrawTcp.exe
+C:\Users\hamza\source\repos\DrawTcp\DrawTcp\bin\Debug\DrawTcp.pdb
+C:\Users\hamza\source\repos\DrawTcp\DrawTcp\obj\Debug\MainWindow.baml
+C:\Users\hamza\source\repos\DrawTcp\DrawTcp\obj\Debug\DrawTcp.g.resources
+C:\Users\hamza\source\repos\DrawTcp\DrawTcp\obj\Debug\DrawTcp.Properties.Resources.resources
+C:\Users\hamza\source\repos\DrawTcp\DrawTcp\obj\Debug\DrawTcp.csproj.GenerateResource.cache
+C:\Users\hamza\source\repos\DrawTcp\DrawTcp\obj\Debug\DrawTcp.csproj.CoreCompileInputs.cache
+C:\Users\hamza\source\repos\DrawTcp\DrawTcp\obj\Debug\DrawTcp.exe
+C:\Users\hamza\source\repos\DrawTcp\DrawTcp\obj\Debug\DrawTcp.pdb
+C:\Users\hamza\source\repos\DrawTcp\DrawTcp\obj\Debug\Login.g.cs
+C:\Users\hamza\source\repos\DrawTcp\DrawTcp\obj\Debug\Login.baml
