@@ -31,7 +31,9 @@ namespace DrawTcp
         private int _portNum;
 
         public int PortNum { get => _portNum; set => _portNum = value; }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void connectionCreate()
         {
             Socket socket=null;
@@ -72,6 +74,11 @@ namespace DrawTcp
 
            
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void InfoGather_Click(object sender, RoutedEventArgs e)
         {
             

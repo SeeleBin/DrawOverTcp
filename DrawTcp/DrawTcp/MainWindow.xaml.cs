@@ -33,7 +33,13 @@ namespace DrawTcp
         }
         
         
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <param name="color"></param>
+        /// <param name="size"></param>
         private void drawLine(string x, string y, string color, string size)
         {
             string ascissa, ordinata, colorazione,grandezza;
@@ -70,7 +76,9 @@ namespace DrawTcp
                 drawingCanvas.Children.Add(ellipse);
             }));
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         private async void Listen()
         {
             await Task.Run(() =>
@@ -94,6 +102,13 @@ namespace DrawTcp
                                     OldwordsTxt.Items.Clear();
                                 }));
                             }
+                            else if(message.Contains("Cancella"))
+                            {
+                                this.Dispatcher.BeginInvoke(new Action(() =>
+                                {
+                                    drawingCanvas.Children.Clear();
+                                }));
+                            }
                             else
                             {
                                 drawLine(message.Split('!')[0], message.Split('!')[1], message.Split('!')[2], message.Split('!')[3]);
@@ -109,7 +124,11 @@ namespace DrawTcp
             });
            
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void checkAnswBtn_Click(object sender, RoutedEventArgs e)
         {
             if (GuessTxt.Text != "")

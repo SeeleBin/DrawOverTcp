@@ -32,8 +32,7 @@
             <RadioButton x:Name="MediumPen" Content="Medium" Checked="Medium_Checked"/>
             <RadioButton x:Name="BigPen" Content="Big" Checked="BigPen_Checked"/>
         </StackPanel>
-        <Button x:Name="deleteDrawing" Content="Delete drawing" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Margin="128,341,0,0" Height="34" Click="deleteDrawing_Click"/>
-        <Button x:Name="btnSend" Content="Send drawing" HorizontalAlignment="Left" VerticalAlignment="Top" Width="89" Margin="10,341,0,0" Height="34"/>
+        <Button x:Name="deleteDrawing" Content="Delete drawing" HorizontalAlignment="Left" VerticalAlignment="Top" Width="247" Margin="0,332,0,0" Height="77" Click="deleteDrawing_Click"/>
         <TextBox x:Name="drawName" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="10,41,0,0"/>
         <Label Content="Insert what's in the image!" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
         <Button x:Name="startBtn" Content="Start Game!" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,69,0,0" Click="startBtn_Click"/>

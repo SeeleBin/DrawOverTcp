@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DrawTcp"
         mc:Ignorable="d"
-        Title="DrawOverTCP" Height="482" Width="808" ResizeMode="NoResize">
+        Title="DrawOverTCP" Height="488.587" Width="808" ResizeMode="NoResize">
     <Grid x:Name="MainGrid" Margin="0,0,4,-19" >
         <Grid.RowDefinitions>
             <RowDefinition Height="308*"/>

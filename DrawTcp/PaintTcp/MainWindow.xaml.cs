@@ -34,7 +34,11 @@ namespace PaintTcp
             medium=15,
             large=20
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="color"></param>
+        /// <param name="mousePos"></param>
         private void drawLine(Brush color,Point mousePos)
         {
             Ellipse ellipse = new Ellipse();
@@ -47,7 +51,10 @@ namespace PaintTcp
             Byte[] data = Encoding.ASCII.GetBytes(sendPos.X + "!" + sendPos.Y + "!" + color.ToString() + "!" + currentSize + "!");
             socket1.Send(data);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="answerTry"></param>
         public void WinGame(string answerTry)
         {
             answerTry=answerTry.ToUpper();
@@ -55,22 +62,30 @@ namespace PaintTcp
             {
                 this.Dispatcher.BeginInvoke(new Action(() =>
                 {
-                    MessageBox.Show("L'iimagine è stata indovinata");
+                    MessageBox.Show("L'immagine è stata indovinata");
                     Byte[] data = Encoding.ASCII.GetBytes("EndGame");
                     socket1.Send(data);
                     drawingCanvas.Children.Clear();
+                    startBtn.IsEnabled = true;
+                    drawingCanvas.IsEnabled = false;
+
                 }));
                
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="socket"></param>
         public MainWindow(Socket socket)
         {
             InitializeComponent();
             socket1 = socket;
             Listen();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         private async void Listen()
         {
 
@@ -97,6 +112,11 @@ namespace PaintTcp
             });
 
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Canvas_MouseMove(object sender, MouseEventArgs e)
         {
             if (activePaint == true)
@@ -105,46 +125,78 @@ namespace PaintTcp
                 drawLine(currentColor, sendPos);
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BlackPen_Checked(object sender, RoutedEventArgs e)
         {
             currentColor = Brushes.Black;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RedPen_Checked(object sender, RoutedEventArgs e)
         {
             currentColor = Brushes.Red;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BluePen_Checked(object sender, RoutedEventArgs e)
         {
             currentColor = Brushes.Blue;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void YellowPen_Checked(object sender, RoutedEventArgs e)
         {
             currentColor = Brushes.Yellow;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SmallPen_Checked(object sender, RoutedEventArgs e)
         {
             currentSize = (int)Sizes.small;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Medium_Checked(object sender, RoutedEventArgs e)
         {
             currentSize = (int)Sizes.medium;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BigPen_Checked(object sender, RoutedEventArgs e)
         {
             currentSize = (int)Sizes.large;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void deleteDrawing_Click(object sender, RoutedEventArgs e)
         {
             int cont = drawingCanvas.Children.Count;
-            
+
             if (cont > 0)
             {
                 Byte[] data = Encoding.ASCII.GetBytes("Cancella");
@@ -153,22 +205,38 @@ namespace PaintTcp
             }
                 
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void drawingCanvas_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             activePaint = true;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void drawingCanvas_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             activePaint = false;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EraserPen_Checked(object sender, RoutedEventArgs e)
         {
             currentColor = Brushes.White;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void startBtn_Click(object sender, RoutedEventArgs e)
         {
             if(drawName.Text != "")
