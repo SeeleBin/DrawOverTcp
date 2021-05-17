@@ -44,8 +44,24 @@ namespace PaintTcp
             Canvas.SetTop(ellipse, mousePos.Y);
             Canvas.SetLeft(ellipse, mousePos.X);
             drawingCanvas.Children.Add(ellipse);
-            Byte[] data = Encoding.ASCII.GetBytes(sendPos.X + "!" + sendPos.Y + "!" + color.ToString() + "!" + currentSize + "!" + answer + "!");
+            Byte[] data = Encoding.ASCII.GetBytes(sendPos.X + "!" + sendPos.Y + "!" + color.ToString() + "!" + currentSize + "!");
             socket1.Send(data);
+        }
+
+        public void WinGame(string answerTry)
+        {
+            answerTry=answerTry.ToUpper();
+            if (answerTry.Contains(answer))
+            {
+                this.Dispatcher.BeginInvoke(new Action(() =>
+                {
+                    MessageBox.Show("L'iimagine è stata indovinata");
+                    Byte[] data = Encoding.ASCII.GetBytes("EndGame");
+                    socket1.Send(data);
+                    drawingCanvas.Children.Clear();
+                }));
+               
+            }
         }
 
         public MainWindow(Socket socket)
@@ -70,13 +86,7 @@ namespace PaintTcp
                         if ((i = socket1.Receive(bytes)) != 0)
                         {
                             message = Encoding.ASCII.GetString(bytes);
-                            if (message.Contains("EndGame"))
-                            {
-                                MessageBox.Show("L'utente ha indovinato!");
-                                startBtn.IsEnabled = true;
-                                drawingCanvas.Children.Clear();
-                                drawingCanvas.IsEnabled = false;
-                            }
+                            WinGame(message);
                         }
                     }
                     catch

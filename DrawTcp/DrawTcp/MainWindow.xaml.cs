@@ -24,6 +24,7 @@ namespace DrawTcp
     public partial class MainWindow : Window
     {
         Socket socket1;
+        
         public MainWindow(Socket socket)
         {
             InitializeComponent();
@@ -31,19 +32,7 @@ namespace DrawTcp
             Listen();
         }
         
-        public void WinGame(string answer)
-        {
-            if (OldwordsTxt.Items.Count > 0)
-            {
-                if (answer == OldwordsTxt.Items[0].ToString().ToUpper())
-                {
-                    MessageBox.Show("Hai indovinato correttamente");
-                    Byte[] data = Encoding.ASCII.GetBytes("EndGame");
-                    socket1.Send(data);
-                    drawingCanvas.Children.Clear();
-                }
-            }
-        }
+        
 
         private void drawLine(string x, string y, string color, string size)
         {
@@ -84,7 +73,6 @@ namespace DrawTcp
 
         private async void Listen()
         {
-         
             await Task.Run(() =>
             {
                 int i;
@@ -97,11 +85,14 @@ namespace DrawTcp
                         if ((i = socket1.Receive(bytes)) != 0)
                         {
                             message = Encoding.ASCII.GetString(bytes);
-                            if (message.Contains("Cancella")) 
-                                drawingCanvas.Children.Clear();
-                            else if (message=="EndGame")
+                            if (message.Contains("EndGame"))
                             {
-                                WinGame(message.Split('!')[4]);
+                                this.Dispatcher.BeginInvoke(new Action(() =>
+                                {
+                                    drawingCanvas.Children.Clear();
+                                    MessageBox.Show("Hai indovinato la parola!");
+                                    OldwordsTxt.Items.Clear();
+                                }));
                             }
                             else
                             {
@@ -122,7 +113,12 @@ namespace DrawTcp
         private void checkAnswBtn_Click(object sender, RoutedEventArgs e)
         {
             if (GuessTxt.Text != "")
+            {
                 OldwordsTxt.Items.Add(GuessTxt.Text);
+                Byte[] data = Encoding.ASCII.GetBytes(GuessTxt.Text);
+                socket1.Send(data);
+            }
+                
             
         }
     }
